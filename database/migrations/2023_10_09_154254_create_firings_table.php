@@ -20,8 +20,8 @@ return new class extends Migration
             $table->decimal('longitude', 15, 12);
             $table->decimal('latitude', 15, 12);
             $table->decimal('altitude', 5, 3);
-            $table->unsignedBigInteger('idMine');
-            $table->foreign('idMine')->references('id')->on('mines');
+            $table->unsignedBigInteger('mine_id');
+            $table->foreign('mine_id')->references('id')->on('mines');
             $table->timestamps();
         });
     }

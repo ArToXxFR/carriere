@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name', 39);
             $table->decimal('longitude', 15, 12);
             $table->decimal('latitude', 15, 12);
-            $table->unsignedBigInteger('idConcession');
-            $table->foreign('idConcession')->references('id')->on('concessions')->onUpdate('cascade')->onDelete('cascade');
+            $table->unsignedBigInteger('concession_id');
+            $table->foreign('concession_id')->references('id')->on('concessions')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

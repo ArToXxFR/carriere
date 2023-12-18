@@ -18,9 +18,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'firstname',
+        'lastname',
+        'mail',
+        'phone',
+        'concession_id',
+        'role_id',
     ];
 
     /**
@@ -42,4 +45,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function concession(){
+        return $this->belongsTo(Concession::class);
+    }
+
+    public function role(){
+        return $this->belongsTo(Role::class);
+    }
 }

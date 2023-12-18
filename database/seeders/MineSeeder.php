@@ -14,10 +14,17 @@ class MineSeeder extends Seeder
     public function run(): void
     {
         Mine::create([
-            'name' => "TestMine",
+            'name' => "La pépite",
             'longitude' => 5.4754,
             'latitude' => 7.45745,
-            'idConcession' => 1,
+            'concession_id' => 1,
+        ]);
+
+        Mine::create([
+            'name' => "Lithium 70",
+            'longitude' => 5.4754,
+            'latitude' => 7.45745,
+            'concession_id' => 1,
         ]);
     }
 }

@@ -16,8 +16,8 @@ return new class extends Migration
             $table->enum('ecosystem', ['faune', 'flore', 'eau']);
             $table->date('horodatage');
             $table->integer('quality');
-            $table->unsignedBigInteger('idMine');
-            $table->foreign('idMine')->references('id')->on('mines');
+            $table->unsignedBigInteger('mine_id');
+            $table->foreign('mine_id')->references('id')->on('mines');
             $table->timestamps();
         });
     }

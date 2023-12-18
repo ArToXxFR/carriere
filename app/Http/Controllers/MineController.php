@@ -12,7 +12,7 @@ class MineController extends Controller
 
         $mine = Mine::find($id);
 
-        return view('mine', [
+        return view('concession.mine', [
             'mine' => $mine,
         ]);
     }

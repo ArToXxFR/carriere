@@ -20,5 +20,11 @@ class ConcessionSeeder extends Seeder
             'siret'=> '1234678901234',
             'phone'=> '06060606',
         ]);
+
+        Concession::create([
+            'name'=> 'La mine en argent',
+            'siret'=> '1234678907234',
+            'phone'=> '0606060606',
+        ]);
     }
 }
